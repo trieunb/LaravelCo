@@ -22,8 +22,9 @@ $(document).ready(function() {
 	        },
 	        error: function(xhr, statusText, errorThrown) {
 	        	var data = JSON.parse(xhr.responseText);
+	        	console.log(data)
 	        	var element = $('#form-user-create');
-	        	_validate(element, data);
+	        	_validate(element, data.errors);
 	        }
 	    });
 	});

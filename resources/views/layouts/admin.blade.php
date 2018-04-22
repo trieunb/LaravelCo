@@ -17,8 +17,9 @@
     <link href="/admin/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="/admin/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/admin/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
-    <link rel="stylesheet" href="/admin/vendors/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- <link rel="stylesheet" href="/admin/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css"> -->
+    <!-- <link rel="stylesheet" href="/admin/vendors/bootstrap-daterangepicker/daterangepicker.css"> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Custom Theme Style -->
     <link href="/admin/build/css/custom.min.css" rel="stylesheet">
     <link href="/admin/css/admin.css" rel="stylesheet">
@@ -45,7 +46,8 @@
     </div>
 
     <!-- jQuery -->
-    <script src="/admin/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Bootstrap -->
     <script src="/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -55,8 +57,8 @@
     <!-- jQuery custom content scroller -->
     <script src="/admin/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/admin/vendors/moment/min/moment.min.js"></script>
-    <script src="/admin/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="/admin/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- <script src="/admin/vendors/bootstrap-daterangepicker/daterangepicker.js"></script> -->
+    <!-- <script src="/admin/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> -->
     <!-- Custom Theme Scripts -->
     <script src="/admin/build/js/custom.min.js"></script>
     <script src="/admin/js/simpleUpload.min.js"></script>

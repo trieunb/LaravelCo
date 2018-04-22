@@ -1,10 +1,9 @@
 
 $(document).ready(function() {
 	$('#btn-save').on('click', function() {
-		clearError();
+		_clearError();
 		var data = {
 			'user_cd' 		: $('.user_cd').val(),
-			'password' 		: $('.password').val(),
 			'email' 		: $('.email').val(),
 			'first_name' 	: $('.first_name').val(),
 			'last_name' 	: $('.last_name').val(),
@@ -13,7 +12,7 @@ $(document).ready(function() {
 			'is_role' 		: $('.is_role').val(),
 		};
 		$.ajax({
-	        url: '/user/create',
+	        url: '/user/edit',
 	        type: 'POST',
 	        dataType: 'json',
 	        data: data,
@@ -23,7 +22,7 @@ $(document).ready(function() {
 	        error: function(xhr, statusText, errorThrown) {
 	        	var data = JSON.parse(xhr.responseText);
 	        	var element = $('#form-user-create');
-	        	validate(element, data);
+	        	_validate(element, data.errors);
 	        }
 	    });
 	});

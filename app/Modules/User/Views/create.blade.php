@@ -68,7 +68,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12 xdisplay_inputx has-feedback">
-                  <input type="text" class="form-control has-feedback-left dob" id="single_cal1" placeholder="mm/dd/yyyy">
+                  <input type="text" class="form-control has-feedback-left dob" id="datepicker" placeholder="yyyy/mm/dd">
                   <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>

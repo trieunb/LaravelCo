@@ -20,21 +20,14 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="user-name">User Name<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="user-name" name="user-name" class="form-control col-md-7 col-xs-12 required user_cd" value="{{ $list['user_cd'] }}">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password<span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="password" id="password" name="password" class="form-control col-md-7 col-xs-12 required password">
+                  <input type="text" id="user-name" name="user-name" disabled="disabled" class="form-control col-md-7 col-xs-12 required user_cd" value="{{ $list['user_cd'] }}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="email" id="email" name="email" class="form-control col-md-7 col-xs-12 required email" value="{{ $list['email'] }}">
+                  <input type="email" id="email" name="email" disabled="disabled" class="form-control col-md-7 col-xs-12 required email" value="{{ $list['email'] }}">
                 </div>
               </div>
               <div class="form-group">
@@ -68,7 +61,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" class="form-control has-feedback-left dob" id="single_cal1" placeholder="mm/dd/yyyy" value="{{ $list['dob'] }}">
+                  <input type="text" class="form-control has-feedback-left dob" id="datepicker" placeholder="yyyy/mm/dd" value="{{ $list['dob'] or '' }}">
                   <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
