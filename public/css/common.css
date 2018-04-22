@@ -1,0 +1,13 @@
+.panel_toolbox {
+	min-width: 0px;
+}
+input.item-error {
+	border: 1px solid red;
+}
+span.item-error {
+	color: red;
+}
+p.item-error {
+	color: red;
+	font-size: 20px;
+}
