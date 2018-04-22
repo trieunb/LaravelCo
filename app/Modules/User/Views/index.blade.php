@@ -6,7 +6,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
     <div class="x_title">
-      <h2>Table design <small>Custom design</small></h2>
+      <h2>User Manage <small>User Lists</small></h2>
       <ul class="nav navbar-right panel_toolbox">
         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
         </li>
@@ -20,9 +20,10 @@
             <tr class="headings">
               <th class="column-title text-center" width="150px">User Name</th>
               <th class="column-title text-center">Email</th>
-              <th class="column-title text-center">Birth Day</th>
-              <th class="column-title text-center">Gender</th>
-              <th class="column-title text-center no-link last"><span class="nobr">Action</span>
+              <th class="column-title text-center" width="10%">BirthDay</th>
+              <th class="column-title text-center" width="10%">Gender</th>
+              <th class="column-title text-center" width="10%">Ngày Tạo</th>
+              <th class="column-title text-center no-link last" width="15%"><span class="nobr">Action</span>
               </th>
               <th class="bulk-actions" colspan="7">
                 <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
@@ -36,9 +37,13 @@
             <tr class="even pointer">
               <td class=" ">{{$list->user_cd}}</td>
               <td class=" ">{{$list->email}}</td>
-              <td class=" ">{{$list->dob}}</td>
-              <td class=" ">{{$list->gender}}</td>
-              <td class=" last"><a href="user/edit/{{$list->user_cd}}">View</a>
+              <td class="text-center">{{date('Y/m/d', strtotime($list->dob))}}</td>
+              <td class=" ">@if($list->gender == '1') Male @else Female @endif</td>
+              <td class="text-center">{{date('Y/m/d', strtotime($list->create_dt))}}</td>
+              <td class="text-center last">
+                <a href="user/edit/{{$list->user_cd}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                <!-- <button id="delete-user">Delete</button> -->
+                <a href="javascript:;" class="btn btn-danger btn-xs delete-user" data-delete="{{$list->user_cd}}"><i class="fa fa-trash-o"></i> Delete </a>
               </td>
             </tr>
             @endforeach
@@ -58,4 +63,26 @@
 @endsection
 @section('script')
 <script src="/admin/js/news/news_detail.js"></script>
+<script>
+    $(".delete-user").click(function() {
+      var user = $(this).data('delete');
+      dalert.confirm("Bạn có muốn xóa user này không?","Confirm !",function(result){
+          if(result){
+            $.ajax({
+              url: '/user/delete',
+              type: 'POST',
+              dataType: 'json',
+              data: {user: user},
+              success: function(res) {
+                toastr.success('User Deleted Successfull!');
+                location.reload();
+              },
+              error: function(xhr, statusText, errorThrown) {
+                toastr.error('User Deleted Error!');
+              }
+          });
+          }
+      });
+    });
+</script>
 @endsection

@@ -37,10 +37,10 @@ class UserCreateRequest extends FormRequest
     public function messages()
     {
         return [
-            'user_cd.required'      => 'A user name attribute is required',
-            'password.required'     => 'A password attribute is required',
-            'email.required'        => 'An email attribute is required',
-            'first_name.required'   => 'An first name attribute is required',
+            'user_cd.required'      => 'The UserName is required',
+            'password.required'     => 'The Password is required',
+            'email.required'        => 'The Email is required',
+            'first_name.required'   => 'The First name is required',
         ];
     }
 }

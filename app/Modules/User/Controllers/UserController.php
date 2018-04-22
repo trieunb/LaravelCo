@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function getIndex()
     {
-        $lists = \DB::table('tb_user')->paginate(10);
+        $lists = \DB::table('tb_user')->orderBy('create_dt', 'asc')->paginate(10);
         return view("User::index", ['lists' => $lists]);
     }
 
@@ -27,6 +27,7 @@ class UserController extends Controller
 
     public function postCreateUser(UserCreateRequest $request) {
         $data = $request->all();
+        $data['create_dt']  =   date('Y/m/d');
         $data['password'] = \Hash::make($request->password);
         \DB::table('tb_user')->insert(
             $data
@@ -53,8 +54,16 @@ class UserController extends Controller
                 "gender"            =>  $request->gender,
                 "dob"               =>  date('Y/m/d', strtotime($request->dob)),
                 "is_role"           =>  $request->is_role,
+                "update_dt"         =>  date('Y/m/d')
             ];
         \DB::table('tb_user')->where('user_cd', $request->user_cd)->update($data);
+        return response()->json([
+                'status'    =>  true,
+            ]);
+    }
+    public function postDelete(Request $request)
+    {
+        \DB::table('tb_user')->where('user_cd', $request->user)->delete();
         return response()->json([
                 'status'    =>  true,
             ]);

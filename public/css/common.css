@@ -11,3 +11,6 @@ p.item-error {
 	color: red;
 	font-size: 20px;
 }
+label.btn.btn-default.active {
+    background-color: #337ab7;
+}

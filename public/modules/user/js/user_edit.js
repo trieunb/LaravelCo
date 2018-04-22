@@ -1,5 +1,17 @@
 
 $(document).ready(function() {
+	// Check gender
+	var checked = $('#gender').data('check');
+	$('input[name="gender"][value="'+checked+'"]').prop('checked',true);
+	if (checked) {
+		$('.label-male').addClass('active');
+	} else {
+		$('.label-female').addClass('active');
+	}
+	// Selected combobox role
+	var selected = $('.is_role').data('select');
+	$('.is_role option[value="'+selected+'"]').prop('selected',true);
+
 	$('#btn-save').on('click', function() {
 		_clearError();
 		var data = {
@@ -17,7 +29,7 @@ $(document).ready(function() {
 	        dataType: 'json',
 	        data: data,
 	        success: function(res) {
-	          	toastr.success('Create User Successfull!')
+	          	toastr.success('Edit User Successfull!')
 	        },
 	        error: function(xhr, statusText, errorThrown) {
 	        	var data = JSON.parse(xhr.responseText);

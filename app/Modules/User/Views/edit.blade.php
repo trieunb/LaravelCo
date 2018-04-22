@@ -47,11 +47,11 @@
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div id="gender" class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                  <div id="gender" class="btn-group" data-toggle="buttons" data-check="{{ $list['gender'] }}">
+                    <label class="btn btn-default label-male" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
                       <input type="radio" name="gender" value="1"> &nbsp; Male &nbsp;
                     </label>
-                    <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <label class="btn btn-default label-female" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
                       <input type="radio" name="gender" value="0"> Female
                     </label>
                   </div>
@@ -61,14 +61,14 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" class="form-control has-feedback-left dob" id="datepicker" placeholder="yyyy/mm/dd" value="{{ $list['dob'] or '' }}">
+                  <input type="text" class="form-control has-feedback-left dob" id="datepicker" placeholder="yyyy/mm/dd" value="{{ date('Y/m/d', strtotime($list['dob'])) }}">
                   <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Role</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control is_role" name="role">
+                  <select class="form-control is_role" name="role" data-select="{{ $list['is_role'] }}">
                     <option></option>
                     <option value="1">Administrator</option>
                     <option value="2">Sub Admin</option>

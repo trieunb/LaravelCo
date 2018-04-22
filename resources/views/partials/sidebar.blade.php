@@ -32,8 +32,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><a href="/user/create">Tạo Mới</a></li>
               <li><li><a href="/user">Danh Sách</a></li></li>
+              <li><a href="/user/create">Tạo Mới</a></li>
             </ul>
           </li>
           <li>
@@ -42,8 +42,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><a href="/test/create">Tạo Mới</a></li>
               <li><a href="/test">Danh Sách</a></li>
+              <li><a href="/test/create">Tạo Mới</a></li>
             </ul>
           </li>
           <li>

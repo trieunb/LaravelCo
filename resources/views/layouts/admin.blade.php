@@ -19,7 +19,8 @@
     <link href="/admin/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
     <!-- <link rel="stylesheet" href="/admin/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css"> -->
     <!-- <link rel="stylesheet" href="/admin/vendors/bootstrap-daterangepicker/daterangepicker.css"> -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <!-- Custom Theme Style -->
     <link href="/admin/build/css/custom.min.css" rel="stylesheet">
     <link href="/admin/css/admin.css" rel="stylesheet">
@@ -47,6 +48,7 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="/js/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Bootstrap -->
     <script src="/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -63,6 +65,8 @@
     <script src="/admin/build/js/custom.min.js"></script>
     <script src="/admin/js/simpleUpload.min.js"></script>
     <script src="/js/toastr.min.js"></script>
+    
+    <script src="/js/dalert.jquery.min.js"></script>
     <script src="/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="/js/common.js"></script>
     @yield('script')

@@ -8,4 +8,5 @@ Route::group(['module' => 'User', 'prefix' => 'user', 'namespace' => 'App\Module
 
     Route::get('/edit/{id}', 'UserController@getEdit');
     Route::post('/edit', 'UserController@postEdit');
+    Route::post('/delete', 'UserController@postDelete');
 });
