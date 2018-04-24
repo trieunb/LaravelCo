@@ -52,6 +52,7 @@
     </div>
   <!-- jQuery -->
   <script src="/admin/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/js/toastr.min.js"></script>
   <script src="/js/common.js"></script>
   <script src="/admin/js/login/login.js"></script>

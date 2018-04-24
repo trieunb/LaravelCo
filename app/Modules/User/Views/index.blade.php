@@ -20,6 +20,7 @@
             <tr class="headings">
               <th class="column-title text-center" width="150px">User Name</th>
               <th class="column-title text-center">Email</th>
+              <th class="column-title text-center">Full Name</th>
               <th class="column-title text-center" width="10%">BirthDay</th>
               <th class="column-title text-center" width="10%">Gender</th>
               <th class="column-title text-center" width="10%">Ngày Tạo</th>
@@ -37,6 +38,7 @@
             <tr class="even pointer">
               <td class=" ">{{$list->user_cd}}</td>
               <td class=" ">{{$list->email}}</td>
+              <td class=" ">{{$list->first_name ." ". $list->last_name}}</td>
               <td class="text-center">{{date('Y/m/d', strtotime($list->dob))}}</td>
               <td class=" ">@if($list->gender == '1') Male @else Female @endif</td>
               <td class="text-center">{{date('Y/m/d', strtotime($list->create_dt))}}</td>

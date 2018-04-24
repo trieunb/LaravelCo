@@ -11,7 +11,9 @@ class UserController extends Controller
 {
     public function getIndex()
     {
-        $lists = \DB::table('tb_user')->orderBy('create_dt', 'asc')->paginate(10);
+        $lists = \DB::table('tb_user')
+                ->orderBy('create_dt', 'asc')
+                ->paginate(10);
         return view("User::index", ['lists' => $lists]);
     }
 

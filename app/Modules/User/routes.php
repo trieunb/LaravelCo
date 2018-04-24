@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['module' => 'User', 'prefix' => 'user', 'namespace' => 'App\Modules\User\Controllers'], function() {
+Route::group(['middleware' => ['admin'], 'module' => 'User', 'prefix' => 'user', 'namespace' => 'App\Modules\User\Controllers'], function() {
 
     Route::get('/', 'UserController@getIndex');
     Route::get('/create', 'UserController@getCreate');
