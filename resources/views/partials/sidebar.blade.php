@@ -16,7 +16,7 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><a href="/dashboard">Dashboard</a></li>
+              <li><a href="/admin/dashboard">Dashboard</a></li>
             </ul>
           </li>
           <li>
@@ -25,8 +25,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><li><a href="/user">Danh Sách</a></li></li>
-              <li><a href="/user/create">Tạo Mới</a></li>
+              <li><li><a href="/admin/user">Danh Sách</a></li></li>
+              <li><a href="/admin/user/create">Tạo Mới</a></li>
             </ul>
           </li>
           <li>
@@ -35,8 +35,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><li><a href="/category">List</a></li></li>
-              <li><a href="/category/create">Create</a></li>
+              <li><li><a href="/admin/category">List</a></li></li>
+              <li><a href="/admin/category/create">Create</a></li>
             </ul>
           </li>
           <li>
@@ -45,8 +45,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><li><a href="/job">List</a></li></li>
-              <li><a href="/job/create">Create</a></li>
+              <li><li><a href="/admin/job">List</a></li></li>
+              <li><a href="/admin/job/create">Create</a></li>
             </ul>
           </li>
           <li>
@@ -55,8 +55,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><a href="/test">Danh Sách</a></li>
-              <li><a href="/test/create">Tạo Mới</a></li>
+              <li><a href="/admin/test">Danh Sách</a></li>
+              <li><a href="/admin/test/create">Tạo Mới</a></li>
             </ul>
           </li>
           <li>

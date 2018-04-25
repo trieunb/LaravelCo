@@ -12,7 +12,7 @@ $(document).ready(function() {
 	        data: data,
 	        success: function(res) {
 	          	if (res.status) {
-	          		window.location.href='/dashboard';
+	          		window.location.href='/admin/dashboard';
 	          	} else {
 	          		$('.item-error').remove();
 	          		var validate = '';
