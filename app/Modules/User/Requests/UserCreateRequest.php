@@ -23,9 +23,9 @@ class UserCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_cd'       => 'required|unique:tb_user,user_cd',
+            'user_name'     => 'required|unique:tb_users,user_name',
             'password'      => 'required',
-            'email'         => 'required|email|unique:tb_user,email',
+            'email'         => 'required|email|unique:tb_users,email',
             'first_name'    => 'required'
         ];
     }
@@ -37,7 +37,7 @@ class UserCreateRequest extends FormRequest
     public function messages()
     {
         return [
-            'user_cd.required'      => 'The UserName is required',
+            'user_name.required'    => 'The UserName is required',
             'password.required'     => 'The Password is required',
             'email.required'        => 'The Email is required',
             'first_name.required'   => 'The First name is required',

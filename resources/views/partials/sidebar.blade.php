@@ -19,13 +19,6 @@
               <li><a href="/dashboard">Dashboard</a></li>
             </ul>
           </li>
-          <!-- <li>
-            <a><i class="fa fa-edit"></i> Tin Bán Đất  <span class="fa fa-chevron-down"></span></a>
-            <ul class="nav child_menu">
-              <li><a href="/admin/tin-ban-dat/tao-moi">Tạo Mới</a></li>
-              <li><a href="/admin/tin-ban-dat">Danh Sách</a></li>
-            </ul>
-          </li> -->
           <li>
             <a>
               <i class="fa fa-edit"></i>User
@@ -34,6 +27,16 @@
             <ul class="nav child_menu">
               <li><li><a href="/user">Danh Sách</a></li></li>
               <li><a href="/user/create">Tạo Mới</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-edit"></i>Category
+              <span class="fa fa-chevron-down"></span>
+            </a>
+            <ul class="nav child_menu">
+              <li><li><a href="/category">List</a></li></li>
+              <li><a href="/category/create">Create</a></li>
             </ul>
           </li>
           <li>

@@ -6,7 +6,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
     <div class="x_title">
-      <h2>User Manage <small>User Lists</small></h2>
+      <h2>Category Manage <small>Category Lists</small></h2>
       <ul class="nav navbar-right panel_toolbox">
         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
         </li>
@@ -18,12 +18,8 @@
         <table class="table table-bordered table-striped jambo_table bulk_action">
           <thead>
             <tr class="headings">
-              <th class="column-title text-center" width="150px">User Name</th>
-              <th class="column-title text-center">Email</th>
-              <th class="column-title text-center">Full Name</th>
-              <th class="column-title text-center">Role</th>
-              <th class="column-title text-center" width="10%">BirthDay</th>
-              <th class="column-title text-center" width="10%">Gender</th>
+              <th class="column-title text-center" width="150px">Name</th>
+              <th class="column-title text-center">Image</th>
               <th class="column-title text-center" width="10%">Ngày Tạo</th>
               <th class="column-title text-center no-link last" width="15%"><span class="nobr">Action</span>
               </th>
@@ -37,16 +33,11 @@
             @if (isset($lists))
             @foreach($lists as $list)
             <tr class="even pointer">
-              <td class=" ">{{$list->user_name}}</td>
-              <td class=" ">{{$list->email}}</td>
-              <td class=" ">{{$list->first_name ." ". $list->last_name}}</td>
-              <td class=" ">{{getNameRole($list->is_role)}}</td>
-              <td class="text-center">{{date('Y/m/d', strtotime($list->dob))}}</td>
-              <td class=" ">@if($list->gender == '1') Male @else Female @endif</td>
+              <td class=" ">{{$list->name}}</td>
+              <td class=" ">{{$list->image}}</td>
               <td class="text-center">{{date('Y/m/d', strtotime($list->created_at))}}</td>
               <td class="text-center last">
                 <a href="user/edit/{{$list->user_name}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                <!-- <button id="delete-user">Delete</button> -->
                 <a href="javascript:;" class="btn btn-danger btn-xs delete-user" data-delete="{{$list->user_name}}"><i class="fa fa-trash-o"></i> Delete </a>
               </td>
             </tr>

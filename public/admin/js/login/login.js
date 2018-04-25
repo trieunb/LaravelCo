@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$('#btn-login').on('click', function() {
 		_clearError();
 		var data = {
-			'user_cd' 		: $('.user_cd').val(),
+			'user_name' 	: $('.user_name').val(),
 			'password' 		: $('.password').val(),
 		};
 		$.ajax({

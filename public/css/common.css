@@ -14,3 +14,42 @@ p.item-error {
 label.btn.btn-default.active {
     background-color: #337ab7;
 }
+#uploads .block {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #CCCCCC;
+}
+
+#uploads .block .progressBar {
+	background-color: #3E6FAD;
+	width: 0px;
+	height: 5px;
+	margin-top: 47px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-moz-transition: .25s ease-out;
+	-webkit-transition: .25s ease-out;
+	-o-transition: .25s ease-out;
+	transition: .25s ease-out;
+}
+
+#uploads .block .format {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 34px;
+}
+
+#uploads .block .error {
+	text-align: left;
+	font-size: 14px;
+	color: red;
+}

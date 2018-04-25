@@ -25,3 +25,16 @@ if (!function_exists('sessionDestroy')) {
 		session_destroy();
 	}
 }
+if (!function_exists('getNameRole')) {
+	function getNameRole($role) {
+		if ($role == 1) {
+			return 'Administrator';
+		}
+		if ($role == 2) {
+			return 'Employer';
+		}
+		if ($role == 3) {
+			return 'Employee';
+		}
+	}
+}

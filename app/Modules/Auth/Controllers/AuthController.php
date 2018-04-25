@@ -21,8 +21,8 @@ class AuthController extends Controller
 
     public function postLogin(Request $request) {
         $data     = $request->all();
-        $user     = \DB::table('tb_user')
-                        ->where('user_cd', '=', $request->user_cd)
+        $user     = \DB::table('tb_users')
+                        ->where('user_name', '=', $request->user_name)
                         ->where('is_role', '=', 1)
                         ->get();
         $validates  =   '' ;
@@ -37,7 +37,7 @@ class AuthController extends Controller
             }
         } else {
             $status  = false;
-            $validates['user_cd']   =   'user name not exist';
+            $validates['user_name']   =   'user name not exist';
         }
         sessionSet('key', $user);
         return response()->json([

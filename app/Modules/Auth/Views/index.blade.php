@@ -35,7 +35,7 @@
             <form>
               <h1>Login Admin</h1>
               <div>
-                <input type="text" class="form-control user_cd" placeholder="Username"/>
+                <input type="text" class="form-control user_name" placeholder="Username"/>
               </div>
               <div>
                 <input type="password" class="form-control password" placeholder="Password"/>

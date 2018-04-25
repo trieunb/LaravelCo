@@ -28,7 +28,7 @@ class CommonController extends Controller
                 "name"    =>  $file->getClientOriginalName(),
                 "path"    =>  '/uploads/images/'.$file->getClientOriginalName()
             ];
-        \DB::table('tb_library_images')->insert($data);
+        \DB::table('tb_images')->insert($data);
         return response()->json([
                 'success'    =>  true,
                 'format'     =>  $file->getClientOriginalName()

@@ -20,7 +20,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="user-name">User Name<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="user-name" name="user-name" class="form-control col-md-7 col-xs-12 required user_cd">
+                  <input type="text" id="user-name" name="user-name" class="form-control col-md-7 col-xs-12 required user_name">
                 </div>
               </div>
               <div class="form-group">
@@ -78,8 +78,8 @@
                   <select class="form-control is_role" name="role">
                     <option></option>
                     <option value="1">Administrator</option>
-                    <option value="2">Sub Admin</option>
-                    <option value="3">User</option>
+                    <option value="2">Employer</option>
+                    <option value="3">Employee</option>
                   </select>
                 </div>
               </div>

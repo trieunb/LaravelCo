@@ -44,7 +44,7 @@ class TestController extends Controller
     }
 
     public function getEdit(Request $request) {
-        $list       = \DB::table('tb_test')->where('test_id', $request->id)->get()->first();
+        $list       = \DB::table('tb_test')->where('id', $request->id)->get()->first();
         $list       = json_decode(json_encode($list), true);
         $gallery    = explode(',', $list['item_gallery']);
         $list['item_gallery']    =   $gallery;
@@ -66,7 +66,7 @@ class TestController extends Controller
                 "item_gallery"       =>  $request->item_gallery,
             ];
         // return $data;
-        \DB::table('tb_test')->where('test_id', $request->id)->update($data);
+        \DB::table('tb_test')->where('id', $request->id)->update($data);
         return response()->json([
                 'status'    =>  true,
             ]);
