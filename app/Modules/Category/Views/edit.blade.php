@@ -6,7 +6,7 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Category Manage<small>Create Category</small></h2>
+            <h2>Category Manage<small>Edit Category</small></h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li> 
@@ -19,12 +19,17 @@
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div id="filename" style="margin-bottom: 5px;"></div>
+                  <div id="filename">
+                    @if(!empty($list['image']))
+                      <img src="{{ $list['image'] }}" alt="">
+                    @else
+                      <img src="/uploads/images/icon_default.png" alt="">
+                    @endif
+                  </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Icon
-                </label>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Icon</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="file" name="file" id="category-image" class="image">
                 </div>
@@ -33,7 +38,8 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" name="name" class="form-control col-md-7 col-xs-12 required name">
+                  <input type="text" name="name" class="form-control col-md-7 col-xs-12 required name" value="{{ $list['name'] }}">
+                  <input type="text" name="cat_id" class="hidden cat_id" value="{{ $list['id'] }}">
                 </div>
               </div>
               <div class="ln_solid"></div>
@@ -51,5 +57,5 @@
 </div>
 @endsection
 @section('script')
-<script src="/modules/category/js/category_create.js"></script>
+<script src="/modules/category/js/category_edit.js"></script>
 @endsection

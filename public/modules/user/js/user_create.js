@@ -21,9 +21,8 @@ $(document).ready(function() {
 	          	toastr.success('Create User Successfull!')
 	        },
 	        error: function(xhr, statusText, errorThrown) {
-	        	toastr.errors('Errors!')
+	        	toastr.error('Errors!')
 	        	var data = JSON.parse(xhr.responseText);
-	        	console.log(data)
 	        	var element = $('#form-user-create');
 	        	_validate(element, data.errors);
 	        }

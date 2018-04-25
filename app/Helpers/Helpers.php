@@ -34,7 +34,7 @@ if (!function_exists('getNameRole')) {
 			return 'Employer';
 		}
 		if ($role == 3) {
-			return 'Employee';
+			return 'Jobseeker';
 		}
 	}
 }

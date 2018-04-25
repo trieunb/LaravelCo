@@ -79,7 +79,7 @@
                     <option></option>
                     <option value="1">Administrator</option>
                     <option value="2">Employer</option>
-                    <option value="3">Employee</option>
+                    <option value="3">Jobseeker</option>
                   </select>
                 </div>
               </div>
