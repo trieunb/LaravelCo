@@ -4,8 +4,7 @@ namespace App\Modules\Category\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Modules\Category\Requests\CatCreateRequest;
-use App\Modules\Category\Requests\CatEditRequest;
+use App\Modules\Category\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
@@ -28,7 +27,7 @@ class CategoryController extends Controller
         return view("Category::create");
     }
 
-    public function postCreate(CatCreateRequest $request)
+    public function postCreate(CategoryRequest $request)
     {
         $data 					= 	$request->all();
         $data['created_at']  	=   date('Y/m/d');
@@ -45,7 +44,7 @@ class CategoryController extends Controller
         return view("Category::edit", ['list' => $list]);
     }
 
-    public function postEdit(CatEditRequest $request)
+    public function postEdit(CategoryRequest $request)
     {
         $data 					= 	$request->all();
         $data['updated_at']  	=   date('Y/m/d');

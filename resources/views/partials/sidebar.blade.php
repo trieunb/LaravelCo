@@ -41,6 +41,16 @@
           </li>
           <li>
             <a>
+              <i class="fa fa-edit"></i>Job
+              <span class="fa fa-chevron-down"></span>
+            </a>
+            <ul class="nav child_menu">
+              <li><li><a href="/job">List</a></li></li>
+              <li><a href="/job/create">Create</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>
               <i class="fa fa-desktop"></i>Example
               <span class="fa fa-chevron-down"></span>
             </a>

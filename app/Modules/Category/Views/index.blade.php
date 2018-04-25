@@ -59,7 +59,6 @@
 </div>
 @endsection
 @section('script')
-<script src="/admin/js/news/news_detail.js"></script>
 <script>
     $(".delete-user").click(function() {
       var user = $(this).data('delete');
