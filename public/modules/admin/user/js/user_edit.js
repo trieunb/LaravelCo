@@ -24,7 +24,7 @@ $(document).ready(function() {
 			'is_role' 		: $('.is_role').val(),
 		};
 		$.ajax({
-	        url: '/user/edit',
+	        url: '/admin/user/edit',
 	        type: 'POST',
 	        dataType: 'json',
 	        data: data,

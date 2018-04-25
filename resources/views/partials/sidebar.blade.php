@@ -25,8 +25,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><li><a href="/admin/user">Danh Sách</a></li></li>
-              <li><a href="/admin/user/create">Tạo Mới</a></li>
+              <li><li><a href="/admin/user">List</a></li></li>
+              <li><a href="/admin/user/create">Create</a></li>
             </ul>
           </li>
           <li>

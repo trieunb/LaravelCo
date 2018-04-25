@@ -4,8 +4,7 @@ namespace App\Modules\Admin\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Modules\Admin\Requests\UserCreateRequest;
-use App\Modules\Admin\Requests\UserEditRequest;
+use App\Modules\Admin\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -27,7 +26,7 @@ class UserController extends Controller
         return view("Admin::user.create");
     }
 
-    public function postCreateUser(UserCreateRequest $request) {
+    public function postCreateUser(UserRequest $request) {
         $data = $request->all();
         $data['created_at']  =   date('Y/m/d');
         $data['password'] = \Hash::make($request->password);
@@ -44,7 +43,7 @@ class UserController extends Controller
         return view("Admin::user.edit", ['list' => $list]);
     }
 
-    public function postEdit(UserEditRequest $request)
+    public function postEdit(UserRequest $request)
     {
         $data = $request->all();
         $data = [

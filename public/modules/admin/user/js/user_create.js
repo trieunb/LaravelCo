@@ -13,7 +13,7 @@ $(document).ready(function() {
 			'is_role' 		: $('.is_role').val(),
 		};
 		$.ajax({
-	        url: '/user/create',
+	        url: '/admin/user/create',
 	        type: 'POST',
 	        dataType: 'json',
 	        data: data,
