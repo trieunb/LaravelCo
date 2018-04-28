@@ -8,6 +8,7 @@ $(document).ready(function() {
 		}
 		var data = {
 			'name' 				: $('.name').val(),
+			'description' 		: $('.description').val(),
 			'image' 			: image,
 		}
 		$.ajax({

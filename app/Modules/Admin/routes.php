@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['module' => 'Admin', 'prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers'], function() {
+Route::group(['middleware' => ['admin'], 'module' => 'Admin', 'prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers'], function() {
 
     Route::get('/dashboard', 'DashboardController@index');
 
@@ -11,6 +11,22 @@ Route::group(['module' => 'Admin', 'prefix' => 'admin', 'namespace' => 'App\Modu
     Route::get('category/edit/{id}', 'CategoryController@getEdit');
     Route::post('category/edit', 'CategoryController@postEdit');
     Route::post('category/delete', 'CategoryController@postDelete');
+
+    // Route Job
+    Route::get('job', 'JobController@index');
+    Route::get('job/create', 'JobController@getCreate');
+    Route::post('job/create', 'JobController@postCreate');
+    Route::get('job/edit/{id}', 'JobController@getEdit');
+    Route::post('job/edit', 'JobController@postEdit');
+    Route::post('job/delete', 'JobController@postDelete');
+
+    // Route Resume
+    Route::get('resume', 'ResumeController@index');
+    Route::get('resume/create', 'ResumeController@getCreate');
+    Route::post('resume/create', 'ResumeController@postCreate');
+    Route::get('resume/edit/{id}', 'ResumeController@getEdit');
+    Route::post('resume/edit', 'ResumeController@postEdit');
+    Route::post('resume/delete', 'ResumeController@postDelete');
 
 	// Route User
 	Route::get('/user', 'UserController@getIndex');

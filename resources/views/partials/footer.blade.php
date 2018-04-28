@@ -1,6 +1,6 @@
 <footer>
   <div class="pull-right">
-    Bootstrap Admin Template by <a href="dashboard">Dev</a>
+    Developer by <a href="dashboard">Nguyen Trieu</a>
   </div>
   <div class="clearfix"></div>
 </footer>

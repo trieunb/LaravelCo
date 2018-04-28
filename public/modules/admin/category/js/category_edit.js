@@ -9,6 +9,7 @@ $(document).ready(function() {
 		var data = {
 			'id' 				: $('.cat_id').val(),
 			'name' 				: $('.name').val(),
+			'description' 		: $('.description').val(),
 			'image' 			: image,
 		}
 		$.ajax({

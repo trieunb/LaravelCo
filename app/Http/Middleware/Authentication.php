@@ -16,7 +16,7 @@ class Authentication
      */
     public function handle($request, Closure $next)
     {
-        if (sessionHas('key')) {
+        if (sessionHas('auth_admin')) {
             return $next($request);
         } else {
             return redirect('/auth/login');

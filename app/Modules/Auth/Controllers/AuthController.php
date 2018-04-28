@@ -31,6 +31,7 @@ class AuthController extends Controller
             $password = json_decode($user, true)['password'];
             if (Hash::check($request->password, $password)) {
                 $status = true;
+                sessionSet('auth_admin', $user);
             } else {
                 $status = false;
                 $validates['password']  =   'password not exist';
@@ -39,10 +40,16 @@ class AuthController extends Controller
             $status  = false;
             $validates['user_name']   =   'user name not exist';
         }
-        sessionSet('key', $user);
         return response()->json([
                     'status'    =>  $status,
                     'validates' =>  $validates
                 ]);
+    }
+
+    public function getLogout(Request $request) {
+        if (sessionHas('auth_admin')) {
+            sessionDelete('auth_admin');
+            return redirect('auth/login');
+        }
     }
 }

@@ -25,6 +25,15 @@ if (!function_exists('sessionDestroy')) {
 		session_destroy();
 	}
 }
+if (!function_exists('sessionDelete')) {
+	function sessionDelete($key) {
+		if ($key == '') {
+			session_unset(); 
+		} else {
+			unset($_SESSION[$key]);
+		}
+	}
+}
 if (!function_exists('getNameRole')) {
 	function getNameRole($role) {
 		if ($role == 1) {

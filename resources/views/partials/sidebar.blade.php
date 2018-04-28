@@ -41,12 +41,22 @@
           </li>
           <li>
             <a>
-              <i class="fa fa-edit"></i>Job
+              <i class="fa fa-edit"></i>Employer
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><li><a href="/admin/job">List</a></li></li>
-              <li><a href="/admin/job/create">Create</a></li>
+              <li><li><a href="/admin/job">Job List</a></li></li>
+              <li><a href="/admin/job/create">Job Create</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-edit"></i>Candidate
+              <span class="fa fa-chevron-down"></span>
+            </a>
+            <ul class="nav child_menu">
+              <li><li><a href="/admin/resume">Resume List</a></li></li>
+              <li><a href="/admin/resume/create">Resume Create</a></li>
             </ul>
           </li>
           <li>
@@ -57,56 +67,6 @@
             <ul class="nav child_menu">
               <li><a href="/admin/test">Danh Sách</a></li>
               <li><a href="/admin/test/create">Tạo Mới</a></li>
-            </ul>
-          </li>
-          <li>
-            <a>
-              <i class="fa fa-desktop"></i> UI Elements 
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu">
-              <li><a href="#">General Elements</a></li>
-              <li><a href="#">Media Gallery</a></li>
-              <li><a href="#">Typography</a></li>
-              <li><a href="#">Icons</a></li>
-              <li><a href="#">Glyphicons</a></li>
-              <li><a href="#">Widgets</a></li>
-              <li><a href="#">Invoice</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">Calendar</a></li>
-            </ul>
-          </li>
-          <li>
-            <a>
-              <i class="fa fa-table"></i> Tables 
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu">
-              <li><a href="#">Tables</a></li>
-              <li><a href="#">Table Dynamic</a></li>
-            </ul>
-          </li>
-          <li>
-            <a>
-              <i class="fa fa-bar-chart-o"></i> Data Presentation 
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu">
-              <li><a href="#">Chart JS</a></li>
-              <li><a href="#">Chart JS2</a></li>
-              <li><a href="#">Moris JS</a></li>
-              <li><a href="#">ECharts</a></li>
-              <li><a href="#">Other Charts</a></li>
-            </ul>
-          </li>
-          <li>
-            <a>
-              <i class="fa fa-clone"></i>Layouts 
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu">
-              <li><a href="#">Fixed Sidebar</a></li>
-              <li><a href="#">Fixed Footer</a></li>
             </ul>
           </li>
         </ul>
