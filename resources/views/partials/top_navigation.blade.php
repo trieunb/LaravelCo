@@ -8,7 +8,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="/admin/images/img.jpg" alt="">{{ json_decode(sessionGet('auth_admin'), true)['first_name'] }}
+            <img src="/admin/images/img.jpg" alt="">{{ getFullName('auth_admin') }}
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">

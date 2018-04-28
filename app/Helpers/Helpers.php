@@ -34,6 +34,16 @@ if (!function_exists('sessionDelete')) {
 		}
 	}
 }
+if (!function_exists('getFullName')) {
+	function getFullName($key) {
+		$full_name	=	'';
+		if (sessionHas($key)) {
+			$user = json_decode(sessionGet($key), true);
+			$full_name	=	$user['first_name'] .' '. $user['last_name'];
+		}
+		return $full_name;
+	}
+}
 if (!function_exists('getNameRole')) {
 	function getNameRole($role) {
 		if ($role == 1) {
