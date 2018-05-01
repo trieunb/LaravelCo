@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    tinymce.init({ 
-        selector:'textarea.item_text',
-        plugins : 'advlist autolink link image lists charmap print preview',
-        images_upload_url: '/common/upload-tinymce',
-        images_upload_base_path: '/uploads/tinymce/images',
-        images_upload_credentials: true
-    });
+    // tinymce.init({ 
+    //     selector:'textarea.item_text',
+    //     plugins : 'advlist autolink link image lists charmap print preview',
+    //     images_upload_url: '/common/upload-tinymce',
+    //     images_upload_base_path: '/uploads/tinymce/images',
+    //     images_upload_credentials: true
+    // });
 	$(document).on('click', '#close-preview', function(){ 
         $('.image-preview').popover('hide');
         // Hover befor close the preview
@@ -32,7 +32,7 @@ $(document).ready(function() {
         var data = {
             'item_int'         : $('.item_int').val(),
             'item_varchar'     : $('.item_varchar').val(),
-            'item_text'        : tinyMCE.activeEditor.getContent().replace('../uploads', '/uploads'),
+            'item_text'        : tinyMCE.activeEditor.getContent().replace('../../tinymce', '/tinymce'),
             'item_date'        : $('.item_date').val(),
             'item_gallery'     : images.toString()
         };
@@ -47,7 +47,7 @@ $(document).ready(function() {
         form.append('item_gallery', data.item_gallery);
 
         $.ajax({
-            url: '/test/create',
+            url: '/admin/test/create',
             type: 'POST',
             dataType: 'json',
             data: form,

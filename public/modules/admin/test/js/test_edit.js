@@ -47,7 +47,7 @@ $(document).ready(function() {
         form.append('item_gallery', data.item_gallery);
 
         $.ajax({
-            url: '/test/edit',
+            url: '/admin/test/edit',
             type: 'POST',
             dataType: 'json',
             data: form,

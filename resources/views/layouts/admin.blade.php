@@ -70,6 +70,7 @@
     <script src="/js/dalert.jquery.min.js"></script>
     <script src="/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="/js/loadingoverlay.min.js"></script>
+    <script src="/tinymce/tinymce.js"></script>
     <script src="/js/common.js"></script>
     @yield('script')
   </body>

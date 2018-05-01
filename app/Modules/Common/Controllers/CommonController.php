@@ -38,7 +38,7 @@ class CommonController extends Controller
     public function postUploadsTinymce(Request $request) {
         if ($request->hasFile('file')) {
             $file = $request->file('file');
-            $destinationPath = 'uploads/tinymce/images';
+            $destinationPath = 'tinymce/images';
             $file->move($destinationPath, $file->getClientOriginalName());
         }
         return response()->json([

@@ -31,6 +31,9 @@
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Icon</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
+                  <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Upload
+                  </label>
                   <input type="file" name="file" id="category-image" class="image">
                 </div>
               </div>

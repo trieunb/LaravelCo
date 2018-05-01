@@ -70,7 +70,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="date">Item Date<span class="required">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12 xdisplay_inputx form-group has-feedback">
-                    <input type="text" class="form-control has-feedback-left item_date" id="single_cal1" placeholder="mm/dd/yyyy">
+                    <input type="text" class="form-control has-feedback-left item_date" id="datepicker" placeholder="mm/dd/yyyy">
                     <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                   </div>
                 </div>

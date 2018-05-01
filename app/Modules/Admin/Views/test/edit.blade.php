@@ -24,11 +24,14 @@
                   </label>
                   <div class="input-group col-md-6 col-sm-6 col-xs-12 image-preview">
                     <img id="blah" src="/uploads/images/{{ $list['item_image'] }}" alt="your image" style="float: right;">
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i> Upload
+                    </label>
                     <input type='file' id="item_image" class="item_image"/>
                   </div> 
                 </div>
                 <div class="form-group">
-                  <label for="" class="control-label col-md-3 col-sm-3 col-xs-12">Gallery</label>
+                  <label for="" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div id="uploads">
                     @if (count($list['item_gallery']) > 0)
@@ -39,6 +42,14 @@
                         @endforeach
                     @endif
                     </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label col-md-3 col-sm-3 col-xs-12">Gallery</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label for="file-upload" class="custom-file-upload">
+                      <i class="fa fa-cloud-upload"></i> Upload
+                    </label>
                     <input type="file" name="file" id="upload-multile" multiple>
                   </div>
                 </div>
@@ -67,7 +78,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="date">Item Date<span class="required">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12 xdisplay_inputx form-group has-feedback">
-                    <input type="text" class="form-control has-feedback-left item_date" id="single_cal1" placeholder="mm/dd/yyyy" value="{{date('dd/mm/yyyy', strtotime($list['item_date']))}}">
+                    <input type="text" class="form-control has-feedback-left item_date" id="datepicker" placeholder="mm/dd/yyyy" value="{{date('d/m/Y', strtotime($list['item_date']))}}">
                     <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                   </div>
                 </div>
