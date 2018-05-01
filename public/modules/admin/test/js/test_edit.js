@@ -1,11 +1,4 @@
 $(document).ready(function() {
-    tinymce.init({ 
-        selector:'textarea.item_text',
-        plugins : 'advlist autolink link image lists charmap print preview',
-        images_upload_url: '/common/upload-tinymce',
-        images_upload_base_path: '/uploads/tinymce/images',
-        images_upload_credentials: true
-    });
     $(document).on('click', '#close-preview', function(){ 
         $('.image-preview').popover('hide');
         // Hover befor close the preview
