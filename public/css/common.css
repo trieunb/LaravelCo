@@ -54,3 +54,9 @@ label.btn.btn-default.active {
 	font-size: 14px;
 	color: red;
 }
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}

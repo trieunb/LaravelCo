@@ -30,6 +30,7 @@
   </head>
 
   <body class="nav-md">
+    <div class="loader hidden">Loading...</div>
     <div class="container body">
       <div class="main_container">
         <!-- Sidebar -->
@@ -68,6 +69,7 @@
     
     <script src="/js/dalert.jquery.min.js"></script>
     <script src="/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="/js/loadingoverlay.min.js"></script>
     <script src="/js/common.js"></script>
     @yield('script')
   </body>
