@@ -41,3 +41,7 @@ $( document ).ajaxStart(function() {
 $( document ).ajaxComplete(function() {
   $.LoadingOverlay("hide");
 });
+
+$('.custom-file-upload').click(function() {
+  $(this).next().click();
+});

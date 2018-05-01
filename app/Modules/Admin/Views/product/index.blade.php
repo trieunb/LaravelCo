@@ -39,7 +39,7 @@
               </td>
               <td class="text-center">{{date('Y/m/d', strtotime($list->created_at))}}</td>
               <td class="text-center last">
-                <a href="/admin/category/edit/{{$list->ID}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                <a href="/admin/product/edit/{{$list->ID}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                 <a href="javascript:;" class="btn btn-danger btn-xs delete-user" data-delete="{{$list->ID}}"><i class="fa fa-trash-o"></i> Delete </a>
               </td>
             </tr>
@@ -62,19 +62,19 @@
 <script>
     $(".delete-user").click(function() {
       var user = $(this).data('delete');
-      dalert.confirm("Bạn có muốn xóa Category này không?","Confirm !",function(result){
+      dalert.confirm("Bạn có muốn xóa Product này không?","Confirm !",function(result){
           if(result){
             $.ajax({
-              url: '/admin/category/delete',
+              url: '/admin/product/delete',
               type: 'POST',
               dataType: 'json',
               data: {user: user},
               success: function(res) {
-                toastr.success('User Deleted Successfull!');
+                toastr.success('Product Deleted Successfull!');
                 location.reload();
               },
               error: function(xhr, statusText, errorThrown) {
-                toastr.error('User Deleted Error!');
+                toastr.error('Product Deleted Error!');
               }
           });
           }

@@ -62,7 +62,7 @@ class UserController extends Controller
     }
     public function postDelete(Request $request)
     {
-        \DB::table('tb_users')->where('user_name', $request->user)->delete();
+        \DB::table('tb_users')->where('ID', $request->id)->delete();
         return response()->json([
                 'status'    =>  true,
             ]);

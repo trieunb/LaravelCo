@@ -69,14 +69,14 @@
 <script src="/admin/js/news/news_detail.js"></script>
 <script>
     $(".delete-user").click(function() {
-      var user = $(this).data('delete');
+      var id = $(this).data('delete');
       dalert.confirm("Bạn có muốn xóa user này không?","Confirm !",function(result){
           if(result){
             $.ajax({
               url: '/admin/user/delete',
               type: 'POST',
               dataType: 'json',
-              data: {user: user},
+              data: {id: id},
               success: function(res) {
                 toastr.success('User Deleted Successfull!');
                 location.reload();

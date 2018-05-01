@@ -31,10 +31,11 @@ $(document).ready(function() {
 	$('#category-image').change(function(){
         $(this).simpleUpload("/common/upload", {
             start: function(file){
-            //upload started
-            var img = '<img src="/uploads/images/'+file.name+'" alt="">'
-            $('#filename').html(img);
-          },
+            	// this.cancelButton = $('<div class="cancelButton">x</div>');
+            	//upload started
+           	 	var img = '<img src="/uploads/images/'+file.name+'" alt="">'
+            	$('#filename').html(img);
+          	},
 
           success: function(data){
             //upload successful

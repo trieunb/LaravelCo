@@ -24,13 +24,24 @@
                   </label>
                   <div class="input-group col-md-6 col-sm-6 col-xs-12 image-preview">
                     <img id="blah" src="http://placehold.it/180" alt="your image" style="float: right;">
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i> Upload
+                    </label>
                     <input type='file' id="item_image" class="item_image"/>
                   </div> 
                 </div>
                 <div class="form-group">
-                  <label for="" class="control-label col-md-3 col-sm-3 col-xs-12">Gallery</label>
+                  <label for="" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div id="uploads"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label col-md-3 col-sm-3 col-xs-12">Gallery</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label for="file-upload" class="custom-file-upload">
+                      <i class="fa fa-cloud-upload"></i> Upload
+                    </label>
                     <input type="file" name="file" id="upload-multile" multiple>
                   </div>
                 </div>

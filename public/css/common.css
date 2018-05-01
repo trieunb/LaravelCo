@@ -15,12 +15,13 @@ label.btn.btn-default.active {
     background-color: #337ab7;
 }
 #uploads .block {
+	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	margin-right: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 10px;
 	background-color: white;
 	border: 1px solid #CCCCCC;
@@ -42,6 +43,28 @@ label.btn.btn-default.active {
 	transition: .25s ease-out;
 }
 
+#uploads .block .cancelButton {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 25px;
+	height: 25px;
+	background-color: black;
+	border: 2px solid white;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-o-border-radius: 25px;
+	border-radius: 25px;
+	-moz-box-shadow: 0px 0px 10px 0px #C4C4C4;
+	-webkit-box-shadow: 0px 0px 10px 0px #C4C4C4;
+	-o-box-shadow: 0px 0px 10px 0px #C4C4C4;
+	box-shadow: 0px 0px 10px 0px #C4C4C4;
+	cursor: pointer;
+}
+
 #uploads .block .format {
 	text-align: center;
 	font-size: 20px;
@@ -59,4 +82,13 @@ label.btn.btn-default.active {
   border-radius: 50%;
   width: 10em;
   height: 10em;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
 }
