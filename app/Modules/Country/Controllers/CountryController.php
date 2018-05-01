@@ -13,8 +13,18 @@ class CountryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexProvince()
     {
-        return view("Country::index");
+        return view("Country::country.index_province");
+    }
+
+    public function indexDistrict()
+    {
+        return view("Country::country.index_district");
+    }
+
+    public function indexWard()
+    {
+        return view("Country::country.index_ward");
     }
 }

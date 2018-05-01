@@ -1,7 +1,9 @@
 <?php
 
-Route::group(['module' => 'Country', 'prefix' => 'country', 'namespace' => 'App\Modules\Country\Controllers'], function() {
+Route::group(['module' => 'Country', 'prefix' => 'admin', 'namespace' => 'App\Modules\Country\Controllers'], function() {
 
-    Route::get('/', 'CountryController@index');
+    Route::get('/country/province', 'CountryController@indexProvince');
+    Route::get('/country/district', 'CountryController@indexDistrict');
+    Route::get('/country/ward', 'CountryController@indexWard');
 
 });

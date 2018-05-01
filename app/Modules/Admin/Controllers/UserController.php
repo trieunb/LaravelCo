@@ -38,7 +38,7 @@ class UserController extends Controller
 
     public function getEdit(Request $request)
     {
-        $list = \DB::table('tb_users')->where('user_name', $request->id)->get()->first();
+        $list = \DB::table('tb_users')->where('ID', $request->id)->get()->first();
         $list = json_decode(json_encode($list), true);
         return view("Admin::user.edit", ['list' => $list]);
     }

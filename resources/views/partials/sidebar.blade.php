@@ -71,6 +71,17 @@
           </li>
           <li>
             <a>
+              <i class="fa fa-edit"></i>Country
+              <span class="fa fa-chevron-down"></span>
+            </a>
+            <ul class="nav child_menu">
+              <li><li><a href="/admin/country/province">Province List</a></li></li>
+              <li><li><a href="/admin/country/district">District List</a></li></li>
+              <li><li><a href="/admin/country/ward">Ward List</a></li></li>
+            </ul>
+          </li>
+          <li>
+            <a>
               <i class="fa fa-desktop"></i>Example
               <span class="fa fa-chevron-down"></span>
             </a>

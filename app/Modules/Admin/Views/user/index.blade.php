@@ -45,9 +45,9 @@
               <td class=" ">@if($list->gender == '1') Male @else Female @endif</td>
               <td class="text-center">{{date('Y/m/d', strtotime($list->created_at))}}</td>
               <td class="text-center last">
-                <a href="user/edit/{{$list->user_name}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                <a href="/admin/user/edit/{{$list->ID}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                 <!-- <button id="delete-user">Delete</button> -->
-                <a href="javascript:;" class="btn btn-danger btn-xs delete-user" data-delete="{{$list->user_name}}"><i class="fa fa-trash-o"></i> Delete </a>
+                <a href="javascript:;" class="btn btn-danger btn-xs delete-user" data-delete="{{$list->ID}}"><i class="fa fa-trash-o"></i> Delete </a>
               </td>
             </tr>
             @endforeach

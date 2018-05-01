@@ -39,7 +39,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" name="name" class="form-control col-md-7 col-xs-12 required name" value="{{ $list['name'] }}">
-                  <input type="text" name="cat_id" class="hidden cat_id" value="{{ $list['id'] }}">
+                  <input type="text" name="cat_id" class="hidden cat_id" value="{{ $list['ID'] }}">
                 </div>
               </div>
               <div class="form-group">

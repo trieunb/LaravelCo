@@ -39,7 +39,7 @@
               </td>
               <td class="text-center">{{date('Y/m/d', strtotime($list->created_at))}}</td>
               <td class="text-center last">
-                <a href="category/edit/{{$list->ID}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                <a href="/admin/category/edit/{{$list->ID}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                 <a href="javascript:;" class="btn btn-danger btn-xs delete-user" data-delete="{{$list->ID}}"><i class="fa fa-trash-o"></i> Delete </a>
               </td>
             </tr>
