@@ -12,6 +12,14 @@ Route::group(['middleware' => ['admin'], 'module' => 'Admin', 'prefix' => 'admin
     Route::post('category/edit', 'CategoryController@postEdit');
     Route::post('category/delete', 'CategoryController@postDelete');
 
+    // Route Product
+    Route::get('product', 'ProductController@index');
+    Route::get('product/create', 'ProductController@getCreate');
+    Route::post('product/create', 'ProductController@postCreate');
+    Route::get('product/edit/{id}', 'ProductController@getEdit');
+    Route::post('product/edit', 'ProductController@postEdit');
+    Route::post('product/delete', 'ProductController@postDelete');
+
     // Route Job
     Route::get('job', 'JobController@index');
     Route::get('job/create', 'JobController@getCreate');

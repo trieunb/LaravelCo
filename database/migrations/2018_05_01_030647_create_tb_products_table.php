@@ -25,6 +25,8 @@ class CreateTbProductsTable extends Migration
             $table->integer('prod_price');
             $table->integer('prod_price_sale');
             $table->string('prod_price_unit');
+            $table->string('prod_size');
+            $table->string('prod_color');
             $table->timestamps();
         });
     }

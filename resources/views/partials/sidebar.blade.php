@@ -65,8 +65,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li><li><a href="/admin/product">Product List</a></li></li>
-              <li><a href="/admin/product/create">Product Create</a></li>
+              <li><li><a href="/admin/product">List</a></li></li>
+              <li><a href="/admin/product/create">Create</a></li>
             </ul>
           </li>
           <li>
