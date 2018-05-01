@@ -24,7 +24,10 @@ class AdminController extends Controller
                         ->where('user_name', '=', $request->user_name)
                         ->where('is_role', '=', 1)
                         ->get();
-        $validates  =   '' ;
+        $validates  =   [
+                        'user_name' =>  '',
+                        'password'  =>  ''
+                    ];
         if (count($user) > 0) {
             $user     = json_encode($user[0]);
             $password = json_decode($user, true)['password'];
