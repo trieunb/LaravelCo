@@ -14,7 +14,7 @@ class CreateTbSkillsTable extends Migration
     public function up()
     {
         Schema::create('tb_skills', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('ID');
             $table->integer('resume_id');
             $table->string('skill_name', 200);
             $table->integer('skill_percent');

@@ -19,7 +19,7 @@ class Authentication
         if (sessionHas('auth_admin')) {
             return $next($request);
         } else {
-            return redirect('/auth/login');
+            return redirect('/admin/login');
         }
     }
 }

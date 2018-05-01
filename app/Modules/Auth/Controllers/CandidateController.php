@@ -6,24 +6,24 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
-class AuthController extends Controller
+class CandidateController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
+    // Authenticate For Candiate
     public function index()
     {
         return view("Auth::index");
     }
-
     public function postLogin(Request $request) {
         $data     = $request->all();
         $user     = \DB::table('tb_users')
                         ->where('user_name', '=', $request->user_name)
-                        ->where('is_role', '=', 1)
+                        ->where('is_role', '=', 3)
                         ->get();
         $validates  =   '' ;
         if (count($user) > 0) {
@@ -31,7 +31,7 @@ class AuthController extends Controller
             $password = json_decode($user, true)['password'];
             if (Hash::check($request->password, $password)) {
                 $status = true;
-                sessionSet('auth_admin', $user);
+                sessionSet('auth_candidate', $user);
             } else {
                 $status = false;
                 $validates['password']  =   'password not exist';
@@ -45,11 +45,10 @@ class AuthController extends Controller
                     'validates' =>  $validates
                 ]);
     }
-
     public function getLogout(Request $request) {
-        if (sessionHas('auth_admin')) {
-            sessionDelete('auth_admin');
-            return redirect('auth/login');
+        if (sessionHas('auth_candidate')) {
+            sessionDelete('auth_candidate');
+            return redirect('candiate/login');
         }
     }
 }

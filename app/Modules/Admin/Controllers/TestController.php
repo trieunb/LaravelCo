@@ -16,10 +16,10 @@ class TestController extends Controller
     public function index()
     {
     	$lists = \DB::table('tb_test')->paginate(10);
-        return view("Admin::test.danh_sach", ['lists' => $lists]);
+        return view("Admin::test.index", ['lists' => $lists]);
     }
     public function getCreate(Request $request){
-        return view('Admin::test.tao_moi');
+        return view('Admin::test.create');
     }
 
     public function postCreate(Request $request) {
@@ -48,7 +48,7 @@ class TestController extends Controller
         $list       = json_decode(json_encode($list), true);
         $gallery    = explode(',', $list['item_gallery']);
         $list['item_gallery']    =   $gallery;
-        return view('Admin::test.chinh_sua', ['list' => $list]);
+        return view('Admin::test.edit', ['list' => $list]);
     }
 
     public function postEdit(Request $request) {

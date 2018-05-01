@@ -14,7 +14,7 @@ class CreateTbEducationsTable extends Migration
     public function up()
     {
         Schema::create('tb_educations', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('ID');
             $table->integer('resume_id');
             $table->string('edu_school_name', 200);
             $table->string('edu_qualification', 200);

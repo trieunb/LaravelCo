@@ -14,7 +14,7 @@ class CreateTbExperiencesTable extends Migration
     public function up()
     {
         Schema::create('tb_experiences', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('ID');
             $table->integer('resume_id');
             $table->string('exp_employer', 200);
             $table->string('exp_position', 200);

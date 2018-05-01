@@ -27,11 +27,11 @@ class ResumeController extends Controller
         return view("Admin::resume.create");
     }
 
-    public function postCreate(resumeRequest $request)
+    public function postCreate(ResumeRequest $request)
     {
         $data 					= 	$request->all();
         $data['created_at']  	=   date('Y/m/d');
-        \DB::table('tb_resumes')->insert($data);
+        $id     =   \DB::table('tb_resumes')->insert($data);
         return response()->json([
                 'status'    =>  true,
             ]);
@@ -44,7 +44,7 @@ class ResumeController extends Controller
         return view("Admin::resume.edit", ['list' => $list]);
     }
 
-    public function postEdit(resumeRequest $request)
+    public function postEdit(ResumeRequest $request)
     {
         $data 					= 	$request->all();
         $data['updated_at']  	=   date('Y/m/d');

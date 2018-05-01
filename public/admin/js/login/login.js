@@ -6,7 +6,7 @@ $(document).ready(function() {
 			'password' 		: $('.password').val(),
 		};
 		$.ajax({
-	        url: '/auth/do-login',
+	        url: '/admin/do-login',
 	        type: 'POST',
 	        dataType: 'json',
 	        data: data,

@@ -14,7 +14,7 @@ class CreateTbTestTable extends Migration
     public function up()
     {
         Schema::create('tb_test', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('ID');
             $table->integer('item_int');
             $table->string('item_varchar', 200);
             $table->text('item_text');

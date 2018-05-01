@@ -14,7 +14,7 @@ class CreateTbJobsTable extends Migration
     public function up()
     {
         Schema::create('tb_jobs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('ID');
             $table->integer('user_id');
             $table->integer('category_id');
             $table->integer('city_id');
