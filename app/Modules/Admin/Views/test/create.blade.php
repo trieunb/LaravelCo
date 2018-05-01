@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('style')
-  <link rel="stylesheet" href="/modules/test/css/test_create.css">
+  <link rel="stylesheet" href="/modules/admin/test/css/test_create.css">
 @endsection
 @section('content')
   	<div class="right_col" role="main">
