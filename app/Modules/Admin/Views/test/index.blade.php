@@ -39,7 +39,7 @@
               <td class=" ">{{$list->item_varchar}}</td>
               <td class=" ">{!!$list->item_text!!}</td>
               <td class="text-center">{{$list->item_date}}</td>
-              <td class="last"><a href="test/edit/{{$list->id}}">View</a>
+              <td class="last"><a href="test/edit/{{$list->ID}}">View</a>
               </td>
             </tr>
             @endforeach
