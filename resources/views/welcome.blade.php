@@ -89,6 +89,12 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <div class="col-md-6 col-md-offset-6">
+                    <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                    <a href="{{ url('/auth/google') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Google</a>
+                    <a href="{{ url('/auth/github') }}" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
+                    <a href="{{ url('/auth/twitter') }}" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
             </div>
         </div>
     </body>
