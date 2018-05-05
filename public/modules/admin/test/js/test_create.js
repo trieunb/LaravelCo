@@ -152,4 +152,10 @@ $(document).ready(function() {
         l.href = href;
         return l;
     };
+    $(document).on('click', '.cancelButton', function() {
+
+        var path = $(this).parent().css('background-image');
+            path = getLocation(path.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, ''));
+        console.log(path);
+    });
 });

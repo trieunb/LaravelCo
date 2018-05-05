@@ -27,4 +27,9 @@ class CountryController extends Controller
     {
         return view("Country::country.index_ward");
     }
+
+    public function indexImportData()
+    {
+        return view("Country::country.index_import_data");
+    }
 }
