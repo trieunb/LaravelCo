@@ -31,6 +31,13 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="confirm-password">Confirm Password<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="password" id="confirm-password" name="confirm-password" class="form-control col-md-7 col-xs-12 required password_confirmation">
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -73,9 +80,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Role</label>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Role<span class="required">*</span></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control is_role" name="role">
+                  <select class="form-control required is_role" name="role">
                     <option></option>
                     <option value="1">Administrator</option>
                     <option value="2">Employer</option>

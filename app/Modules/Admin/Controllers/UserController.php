@@ -27,7 +27,7 @@ class UserController extends Controller
     }
 
     public function postCreateUser(UserRequest $request) {
-        $data = $request->all();
+        $data = $request->except(['password_confirmation']);
         $data['created_at']  =   date('Y/m/d');
         $data['password'] = \Hash::make($request->password);
         \DB::table('tb_users')->insert($data);

@@ -27,10 +27,12 @@ class UserRequest extends FormRequest
             case 'create': 
                 {
                     return [
-                        'user_name'     => 'required|unique:tb_users,user_name',
-                        'password'      => 'required',
-                        'email'         => 'required|email|unique:tb_users,email',
-                        'first_name'    => 'required'
+                        'user_name'                 => 'required|unique:tb_users,user_name',
+                        'password'                  => 'required|confirmed|min:6',
+                        'password_confirmation'     => 'required|min:6',
+                        'email'                     => 'required|email|unique:tb_users,email',
+                        'first_name'                => 'required',
+                        'is_role'                   => 'required',
                     ];
                 }
             case 'edit': 
@@ -39,7 +41,8 @@ class UserRequest extends FormRequest
                         'user_name'     => 'required',
                         'email'         => 'required',
                         'first_name'    => 'required',
-                        'last_name'     => 'required'
+                        'last_name'     => 'required',
+                        'is_role'       => 'required'
                     ];
                 }
             default:break;
